@@ -16,7 +16,7 @@ import java.util.Map;
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class ReportService {
 
-    public byte[] generateReport(boolean floatUp) throws JRException, FileNotFoundException {
+    public byte[] generateReport(boolean showFirst, boolean showSecond) throws JRException, FileNotFoundException {
         // region get jrxml name
         ClassLoader classLoader = getClass().getClassLoader();
         final URL resource = classLoader.getResource("report.jrxml");
@@ -27,7 +27,8 @@ public class ReportService {
         String path = resource.getPath();
 
         Map<String, Object> map = new HashMap<>();
-        map.put("floatUp", floatUp);
+        map.put("showFirst", showFirst);
+        map.put("showSecond", showSecond);
 
         JasperReport jasperReport = JasperCompileManager.compileReport(path);
         JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, map, new JREmptyDataSource());
