@@ -32,10 +32,10 @@ public class SwaggerConfiguration {
 
     public ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Sample report project for testing a \"float-up\" option")
+                .title("Sample report project for testing how a group of frames can \"float-up\" flawlessly")
                 .version(applicationVersion)
-                .description("Generates a PDF report with three divs based on parameters " +
-                        "\"showFirst\" (BLUE) and \"showSecond\" (RED).")
+                .description("Generates a PDF report with four divs based on parameters " +
+                        "\"showBlue\" and \"showRed\".")
                 .build();
     }
 

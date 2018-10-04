@@ -41,10 +41,10 @@ public class ReportController {
     @RequestMapping(value = "/report", method = GET, produces = APPLICATION_PDF_VALUE)
     public ResponseEntity<byte[]> report(
             @ApiParam(value = "Indicates whether the first div (BLUE) should be shown or not", defaultValue = "true")
-            @RequestParam boolean showFirst,
+            @RequestParam boolean showBlue,
             @ApiParam(value = "Indicates whether the second div (RED) should be shown or not", defaultValue = "true")
-            @RequestParam boolean showSecond) throws JRException, FileNotFoundException {
-        byte[] response = reportService.generateReport(showFirst, showSecond);
+            @RequestParam boolean showRed) throws JRException, FileNotFoundException {
+        byte[] response = reportService.generateReport(showBlue, showRed);
         HttpHeaders headers = new HttpHeaders();
         headers.set("Content-Disposition", "attachment; filename=report.pdf");
         return new ResponseEntity<>(response, headers, HttpStatus.OK);

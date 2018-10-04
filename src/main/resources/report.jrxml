@@ -2,26 +2,26 @@
 <!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Float_UP" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6578bc34-0c2e-4179-99da-5ec1dd90a422">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
-	<parameter name="showFirst" class="java.lang.Boolean"/>
-	<parameter name="showSecond" class="java.lang.Boolean"/>
+	<parameter name="showBlue" class="java.lang.Boolean"/>
+	<parameter name="showRed" class="java.lang.Boolean"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
 	<detail>
-		<band height="216" splitType="Stretch">
+		<band height="259" splitType="Stretch">
 			<staticText>
-				<reportElement x="0" y="0" width="550" height="12" uuid="54cb1704-59d8-4272-9ec1-db4cea913cd3"/>
+				<reportElement x="0" y="0" width="400" height="12" uuid="54cb1704-59d8-4272-9ec1-db4cea913cd3"/>
 				<text><![CDATA[Header 1 (right before conditional frame)]]></text>
 			</staticText>
 			<frame>
-				<reportElement x="0" y="15" width="550" height="66" isRemoveLineWhenBlank="true" uuid="0140ba9b-f2f0-494c-82bc-caf6b5efc63e">
-					<printWhenExpression><![CDATA[$P{showFirst}]]></printWhenExpression>
+				<reportElement x="0" y="15" width="400" height="66" isRemoveLineWhenBlank="true" uuid="0140ba9b-f2f0-494c-82bc-caf6b5efc63e">
+					<printWhenExpression><![CDATA[$P{showBlue}]]></printWhenExpression>
 				</reportElement>
 				<box>
 					<pen lineWidth="3.0" lineColor="#2E0DD4"/>
 				</box>
 				<staticText>
-					<reportElement x="1" y="1" width="519" height="36" uuid="a8b7d505-a6ad-4359-9263-23ac087b19ff"/>
+					<reportElement x="1" y="1" width="379" height="59" uuid="a8b7d505-a6ad-4359-9263-23ac087b19ff"/>
 					<textElement>
 						<font size="14"/>
 					</textElement>
@@ -29,14 +29,14 @@
 				</staticText>
 			</frame>
 			<frame>
-				<reportElement positionType="Float" x="0" y="85" width="550" height="60" isRemoveLineWhenBlank="true" uuid="c80dd879-ce81-4921-b17e-9882763a3f61">
-					<printWhenExpression><![CDATA[$P{showSecond}]]></printWhenExpression>
+				<reportElement positionType="Float" x="0" y="85" width="400" height="60" isRemoveLineWhenBlank="true" uuid="c80dd879-ce81-4921-b17e-9882763a3f61">
+					<printWhenExpression><![CDATA[$P{showRed}]]></printWhenExpression>
 				</reportElement>
 				<box>
 					<pen lineWidth="3.0" lineColor="#F50A25"/>
 				</box>
 				<staticText>
-					<reportElement x="0" y="0" width="520" height="50" uuid="d0cadbd4-b436-47f4-a32d-2b00f0c6b147"/>
+					<reportElement x="0" y="0" width="380" height="50" uuid="d0cadbd4-b436-47f4-a32d-2b00f0c6b147"/>
 					<textElement>
 						<font size="14"/>
 					</textElement>
@@ -44,16 +44,29 @@
 				</staticText>
 			</frame>
 			<frame>
-				<reportElement positionType="Float" x="2" y="151" width="550" height="60" uuid="e0a5ed13-d8f2-4acd-ac14-1f5633099542"/>
+				<reportElement positionType="Float" x="2" y="151" width="398" height="60" uuid="e0a5ed13-d8f2-4acd-ac14-1f5633099542"/>
 				<box>
 					<pen lineWidth="3.0" lineColor="#22B002"/>
 				</box>
 				<staticText>
-					<reportElement x="1" y="1" width="517" height="39" uuid="482471b4-4c3b-42c6-892d-f8c42ca320bf"/>
+					<reportElement x="1" y="1" width="377" height="39" uuid="482471b4-4c3b-42c6-892d-f8c42ca320bf"/>
 					<textElement>
 						<font size="14"/>
 					</textElement>
 					<text><![CDATA[GREEN: `positionType="Float"`]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="420" y="15" width="130" height="70" uuid="8e057d80-72be-4f66-ae9b-ef80610daf36"/>
+				<box>
+					<pen lineWidth="3.0"/>
+				</box>
+				<staticText>
+					<reportElement x="6" y="6" width="118" height="44" uuid="36d8e560-3af5-4edf-b9ef-9b9311877c3a"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[BLACK]]></text>
 				</staticText>
 			</frame>
 		</band>
