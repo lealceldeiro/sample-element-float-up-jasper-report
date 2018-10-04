@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Float_UP" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6578bc34-0c2e-4179-99da-5ec1dd90a422">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="floatUp" class="java.lang.Boolean"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<detail>
+		<band height="140" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="550" height="12" uuid="54cb1704-59d8-4272-9ec1-db4cea913cd3"/>
+				<text><![CDATA[Header 1 (right before conditional frame)]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="0" y="14" width="550" height="66" isRemoveLineWhenBlank="true" uuid="0140ba9b-f2f0-494c-82bc-caf6b5efc63e">
+					<printWhenExpression><![CDATA[!$P{floatUp}]]></printWhenExpression>
+				</reportElement>
+				<staticText>
+					<reportElement x="0" y="0" width="550" height="36" uuid="a8b7d505-a6ad-4359-9263-23ac087b19ff"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Float up is false, so this text is shown]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="80" width="550" height="60" uuid="c80dd879-ce81-4921-b17e-9882763a3f61"/>
+				<staticText>
+					<reportElement x="0" y="0" width="240" height="30" uuid="d0cadbd4-b436-47f4-a32d-2b00f0c6b147"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Header 2 inside floating frame]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>
