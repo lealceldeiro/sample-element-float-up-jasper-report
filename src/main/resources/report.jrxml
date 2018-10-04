@@ -8,7 +8,7 @@
 		<![CDATA[]]>
 	</queryString>
 	<detail>
-		<band height="259" splitType="Stretch">
+		<band height="211" splitType="Stretch">
 			<staticText>
 				<reportElement x="0" y="0" width="400" height="12" uuid="54cb1704-59d8-4272-9ec1-db4cea913cd3"/>
 				<text><![CDATA[Header 1 (right before conditional frame)]]></text>
