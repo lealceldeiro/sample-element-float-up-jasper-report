@@ -40,7 +40,7 @@
 					<textElement>
 						<font size="14"/>
 					</textElement>
-					<text><![CDATA[RED: `isRemoveLineWhenBlank=true`, `printWhenExpression` and set`positionType="Float"`]]></text>
+					<text><![CDATA[RED: `isRemoveLineWhenBlank=true`, `printWhenExpression` set and `positionType="Float"`]]></text>
 				</staticText>
 			</frame>
 			<frame>
@@ -53,7 +53,7 @@
 					<textElement>
 						<font size="14"/>
 					</textElement>
-					<text><![CDATA[GREEN: `isRemoveLineWhenBlank=true` and set`positionType="Float"`]]></text>
+					<text><![CDATA[GREEN: `positionType="Float"`]]></text>
 				</staticText>
 			</frame>
 		</band>
