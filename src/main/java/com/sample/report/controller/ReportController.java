@@ -4,6 +4,7 @@ package com.sample.report.controller;
 import com.sample.report.config.ReportArea;
 import com.sample.report.service.ReportService;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import lombok.AllArgsConstructor;
@@ -38,10 +39,14 @@ public class ReportController {
     private ReportService reportService;
 
     @RequestMapping(value = "/report", method = GET, produces = APPLICATION_PDF_VALUE)
-    public ResponseEntity<byte[]> report(@RequestParam boolean showFirst, @RequestParam boolean showSecond) throws JRException, FileNotFoundException {
+    public ResponseEntity<byte[]> report(
+            @ApiParam(value = "Indicates whether the first div (BLUE) should be shown or not", defaultValue = "true")
+            @RequestParam boolean showFirst,
+            @ApiParam(value = "Indicates whether the second div (RED) should be shown or not", defaultValue = "true")
+            @RequestParam boolean showSecond) throws JRException, FileNotFoundException {
         byte[] response = reportService.generateReport(showFirst, showSecond);
         HttpHeaders headers = new HttpHeaders();
-        headers.set("Content-Disposition", String.format("attachment; filename=%s.%s", "report", "pdf"));
+        headers.set("Content-Disposition", "attachment; filename=report.pdf");
         return new ResponseEntity<>(response, headers, HttpStatus.OK);
     }
 
