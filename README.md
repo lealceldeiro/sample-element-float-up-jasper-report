@@ -9,6 +9,6 @@ The master branch contains a flaw described here: [How to organize Frames in Jas
 From project directory run the following command: `mvn spring-boot:run`
 
 [1]: https://maven.apache.org/install.html
-[2]]: https://stackoverflow.com/q/52654844/5640649
+[2]: https://stackoverflow.com/q/52654844/5640649
 [3]: https://github.com/lealceldeiro/sample-element-float-up-jasper-report/tree/fix-frame
 [4]: https://github.com/lealceldeiro/sample-element-float-up-jasper-report/commit/186383228500dc678539f0c2a51b8618787a92cc
